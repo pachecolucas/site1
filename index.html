@@ -1,20 +1,55 @@
 <html>
     <head>
         <title>Aqui em cima!</title>
+        <style>
+            td {
+                font-size: 100px;
+                background: grey;
+                color: white;
+                width: 120px;
+                height: 120px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            td:hover {
+                background: lightgray;
+                text-shadow: 5px 2px 10px black;
+            }
+        </style>
     </head>
     <body>
         <table>
             <tbody>
                 <tr>
-                    <td>X</td><td>O</td><td>X</td>
+                    <td onclick="marcar(this)"></td>
+                    <td onclick="marcar(this)"></td>
+                    <td onclick="marcar(this)"></td>
                 </tr>
                 <tr>
-                    <td>X</td><td>O</td><td>X</td>
+                    <td onclick="marcar(this)"></td>
+                    <td onclick="marcar(this)"></td>
+                    <td onclick="marcar(this)"></td>
                 </tr>
                 <tr>
-                    <td>X</td><td>O</td><td>X</td>
+                    <td onclick="marcar(this)"></td>
+                    <td onclick="marcar(this)"></td>
+                    <td onclick="marcar(this)"></td>
                 </tr>
             </tbody>
         </table>
+        <script>
+
+            let jogador = "X"
+
+            function marcar(celula) {
+                celula.innerHTML = jogador
+                if (jogador == "X") {
+                    jogador = "O"
+                } else {
+                    jogador = "X"
+                }
+            }
+        </script>
     </body>
 </html>
